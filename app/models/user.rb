@@ -5,6 +5,6 @@ class User < ApplicationRecord
     validates :dni, presence: true, uniqueness: true
     validates :name, presence: true
     validates :password,
-              length: { minimum:8 },
+              length: { minimum:6 },
               if: -> { new_record? || !password.nil? }
 end
